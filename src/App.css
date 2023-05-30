@@ -1,0 +1,282 @@
+@import "react-slideshow-image/dist/styles.css";
+
+body {
+  margin: 70px 1vw;
+}
+
+h2 {
+  color: #02315e;
+}
+
+h4 {
+  color: #02315e;
+}
+
+h5 {
+  color: #806491;
+}
+
+h6 {
+  color: #806491;
+}
+
+.divstyle {
+  color: #2f70af;
+}
+
+.itemstyle {
+  color: #00457e;
+}
+
+.astyle {
+  text-decoration: none;
+  color: #b9848c;
+}
+
+/* #02315E #00457E #2F70AF #B9848C #806491 */
+.loader {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  perspective: 800px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.showGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.2vw;
+  /* line-gap-override: 10rem; */
+  color: white;
+  color: #02315e;
+  color: #00457e;
+  color: #2f70af;
+  color: #b9848c;
+  color: #d3a7ad;
+
+  color: #806491;
+}
+
+.allShows {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 75vh;
+  overflow-x: auto;
+}
+
+/* display list in overflow */
+.element {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* hide scrollbar */
+.element::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.allShows::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+/* display list in wrap  */
+.element1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img {
+  border-radius: 8px;
+}
+
+.category-title {
+  color: #02315e;
+  /* margin-bottom: -0.1vw; */
+  /* font-size: 3vw; */
+}
+
+.zoom {
+  transition: transform 0.3s;
+}
+
+.zoom:hover {
+  transform: scale(1.05);
+}
+
+.featured-show {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 200px;
+}
+
+#slide-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: auto;
+}
+
+#img-not-found {
+  height: 10vh;
+  width: 10vw;
+}
+
+.buttonstyle {
+  background-color: rgba(51, 51, 51, 0.05);
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+/* .dFlex {
+  display: "flex";
+  justify-content: "space-between";
+} */
+
+.button-4 {
+  appearance: none;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.button-4:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button-4:disabled {
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959da5;
+  cursor: default;
+}
+
+.button-4:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.button-4:focus {
+  outline: 1px transparent;
+}
+
+.button-4:before {
+  display: none;
+}
+
+.button-4:-webkit-details-marker {
+  display: none;
+}
+
+.hovertext {
+  position: relative;
+  border-bottom: 1px dotted black;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 5px;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.content_img {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-right: 10px;
+}
+
+/* Child Text Container */
+.content_img div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: black;
+  color: white;
+  margin-bottom: 5px;
+  font-family: sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.content_img:hover {
+  cursor: pointer;
+}
+
+.content_img:hover div {
+  width: 150px;
+  padding: 8px 15px;
+  visibility: visible;
+  opacity: 0.7;
+}
